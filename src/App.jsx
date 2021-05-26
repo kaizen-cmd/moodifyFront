@@ -4,13 +4,12 @@ import "react-jinke-music-player/assets/index.css";
 import Webcam from "react-webcam";
 import axios from "axios";
 import Logo from "./assets/transparent_white.png";
-import { BrowserRouter, Link, Route } from "react-router-dom";
+import { BrowserRouter, NavLink, Route } from "react-router-dom";
 import UserCard from "./UserCard";
 
 export const BASE_URL = "http://localhost:8000";
 
 function App() {
-
   // states
   const [audioList, setAudioList] = useState([]); //pagination array
 
@@ -119,7 +118,7 @@ function App() {
   }
 
   useEffect(() => {
-    // modalBtn.current.click();
+    modalBtn.current.click();
     getAllUsers();
   }, []);
 
@@ -137,8 +136,8 @@ function App() {
 
             {/* navs */}
             <nav className="d-flex flex-column justify-content-around">
-              <Link to="/">
-                <div className="active">
+              <NavLink to="/" activeClassName="active" exact>
+                <div>
                   <div>
                     <span>
                       <i className="fas fa-home"></i>
@@ -146,8 +145,8 @@ function App() {
                     Home
                   </div>
                 </div>
-              </Link>
-              <Link to="/friends/">
+              </NavLink>
+              <NavLink to="/friends/" activeClassName="active" exact>
                 <div>
                   <div>
                     <span>
@@ -156,14 +155,14 @@ function App() {
                     Friends
                   </div>
                 </div>
-              </Link>
+              </NavLink>
 
               <div>
                 <div>
                   <span>
                     <i className="fas fa-people-carry"></i>
                   </span>{" "}
-                  About
+                  Feed
                 </div>
               </div>
             </nav>
