@@ -170,3 +170,11 @@ button:hover {
 .progress-bar {
     background-color: transparent !important;
 }
+
+#name-modal-btn, #close-btn {
+    display: none;
+}
+
+#name-input {
+    color: black;
+}
