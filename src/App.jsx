@@ -7,7 +7,7 @@ import Logo from "./assets/transparent_white.png";
 import { BrowserRouter, NavLink, Route } from "react-router-dom";
 import UserCard from "./UserCard";
 
-export const BASE_URL = "http://localhost:8000";
+export const BASE_URL = "https://583cc35d272c.ngrok.io";
 
 function App() {
   // states

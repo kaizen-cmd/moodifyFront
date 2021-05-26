@@ -21,7 +21,7 @@ function UserCard({ user }) {
       <img src={user.image} className="card-img-top" alt="user" />
       <div className="card-body">
         <h5 className="card-title">{user.name}</h5>
-        <p className="card-text">{user.mood ? user.mood : "nuetral"}</p>
+        <p className="card-text">{user.mood ? user.mood : "neutral"}</p>
         <button
           className={followState ? `btn btn-success` : `btn btn-primary`}
           onClick={() => follow(user.id)}
