@@ -10,7 +10,7 @@ body {
     background-color: hsla(225, 27%, 6%, 0.9);
 }
 
-h2 {
+h2, #username {
     font-weight: bold;
     font-size: 22px;
     font-family: 'Montserrat', sans-serif;
