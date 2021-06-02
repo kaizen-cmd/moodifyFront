@@ -7,7 +7,10 @@ function UserCard({ user }) {
 
   async function follow(id) {
     if (followState === false) {
-      const res = await axios.post(`${BASE_URL}/api/follow-user/`, { id: id });
+      const res = await axios.post(`${BASE_URL}/api/follow-user/`, {
+        id: id,
+        token: localStorage.getItem("token"),
+      });
       setFollowState(true);
       console.log(res.data);
     }
